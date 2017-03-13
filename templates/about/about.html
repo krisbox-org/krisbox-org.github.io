@@ -1,0 +1,38 @@
+<div class="container-fluid page-container" id="tester">
+  <div class="row">
+    <div id="mycarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="{{bannerPic}}" class="img-fluid banner" alt="Responsive image">
+          <div class="carousel-caption">
+            <table class="bioMobile" style="width: 115%;">
+              <tr>
+                <td class="bioPhoto"><img class="profileImg" src="{{profilePic}}" class="img-fluid"></td>
+                <td>
+                  <div *ngFor="let bio of bios">
+                    {{bio}}
+                  </div>
+                  <br/>
+                  <button type="submit" (click)="goto('div#moreBio.container')" class="btn btn-success moreBioMobile">More</button>
+                </td>
+              </tr>
+            </table>
+            <br/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="moreBio">
+  <br/>
+  <div class="row">
+    <div class="col-md-12 skillsMobile col-centered text-center">
+      <div *ngFor="let skill of skills">
+        {{skill}}
+      </div>
+    </div>
+  </div>
+  <br/>
+</div>

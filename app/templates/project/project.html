@@ -1,0 +1,97 @@
+<div class="container">
+  <div class="row">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <img class="img-fluid img-thumbnail" alt="Responsive image" src="{{projectImage}}">
+        </div>
+        <div class="col-md-6">
+          <h4><a href="{{projectSource}}">{{projectTitle}}</a> {{projectVersion}}</h4>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <div class="container">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">{{projectDescription}}</div>
+        </div>
+      </div>
+      <br/>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">Project Started {{projectStartDate | date: 'MM/dd/yyyy'}}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">Last Updated {{projectUpdated | date: 'MM/dd/yyyy' }}</div>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="container">
+            <div class="row">
+              Project Authors
+            </div>
+          </div>
+          <br/>
+          <div class="container">
+            <div *ngFor="let author of projectAuthors; let i = index">
+              <div class="row">
+                <div class="col-md-3">
+                  <img class="img-fluid img-thumbnail" alt="Responsive image" src="{{projectOwnerAvatar}}">
+                </div>
+                <div class="col-md-8">
+                  <a href="{{ projectAuthorsContact[i] }}"> {{ author }}</a> - {{ projectAuthorsContact[i] }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="container">
+            <div class="row">
+              Project Contributors
+            </div>
+          </div>
+          <br/>
+          <div class="container">
+            <div *ngFor="let contributor of projectContributors; let i = index">
+              <div class="row">
+                <div class="col-md-12">
+                  <a routerLink="{{ projectContributorsContact[i] }}?project={{projectTitle}}">{{ contributor }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" style="background-color: #286090; color: #fff;" data-toggle="dropdown" href="#">Clone or Download
+                <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <input type="text" value="{{projectGitURL}}" readonly="true"></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr/>
+  </div>
+</div>

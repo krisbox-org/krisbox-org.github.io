@@ -1,0 +1,42 @@
+/* Main CSS
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+
+  /* Padding for sticky nav */
+  padding-top: 10px;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Bootstrap
+-------------------------------------------------- */
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+
+/* Loading animation
+-------------------------------------------------- */
+.loading-gears {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+  background-image: url("../img/gifs/loading-gears.gif");
+  background-repeat: no-repeat;
+}
